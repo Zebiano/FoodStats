@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controller/menu.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">controller</a> menu.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.46% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/90</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.46% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/122</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Requires
+const schemaMenu = require('/home/ubuntu/workspace/backend/model/schemas/menu.schema.js');
+const schemaDish = require('/home/ubuntu/workspace/backend/model/schemas/dish.schema.js');
+&nbsp;
+// Get
+function <span class="fstat-no" title="function not covered" >getMenu(</span>req, res) {
+    
+<span class="cstat-no" title="statement not covered" >    schemaMenu.modelMenu.find().sort({date: "asc"}).exec(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultMenus) {</span>
+        //If there is an error, infroms the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(400).send("Error: " + err);</span>
+        }
+        else {
+            //Checks if there are any menus in the database
+<span class="cstat-no" title="statement not covered" >            if (resultMenus.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404).send("No Menus were found in the database.");</span>
+            }
+            //Sends the menus to the user
+            else {
+<span class="cstat-no" title="statement not covered" >                res.status(200).json({menus: resultMenus});</span>
+            }
+        }
+    })
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getMenuById(</span>req, res) {
+    
+    //Holds the menu Id
+    const menuId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+    
+    //Finds the menu
+<span class="cstat-no" title="statement not covered" >    schemaMenu.modelMenu.findById(menuId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultMenu) {</span>
+        //If there is an error, informs the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(400).send("The menu you are trying to find, cannot be found in the database");</span>
+        }
+        else {
+            //Informs the user that the menu cannot be found
+<span class="cstat-no" title="statement not covered" >            if (resultMenu == null || resultMenu == undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(400).send("The menu you are trying to find, cannot be found in the database");</span>
+            }
+            //Sends the menu to the user
+            else {
+<span class="cstat-no" title="statement not covered" >                res.status(200).json({menu: resultMenu});</span>
+            }
+        }
+    })
+}
+&nbsp;
+// Post
+function <span class="fstat-no" title="function not covered" >postMenu(</span>req, res) {
+&nbsp;
+    //Array that keeps the dishes' id's
+    const arrayDishesId = <span class="cstat-no" title="statement not covered" >req.body.dishes;</span>
+    //Array that keeps the dishes' objects
+    let arrayDishesObj = <span class="cstat-no" title="statement not covered" >[];</span>
+    const menuDate = <span class="cstat-no" title="statement not covered" >req.body.date;</span>
+&nbsp;
+    //Checks if there is an dishes array
+<span class="cstat-no" title="statement not covered" >    if (arrayDishesId == undefined || arrayDishesId.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >        res.status(400).send("Dishes are required to add the menu");</span>
+    }
+    else <span class="cstat-no" title="statement not covered" >if (menuDate == undefined || menuDate == null || menuDate == "") {</span>
+<span class="cstat-no" title="statement not covered" >        res.status(400).send("A date is required to add the menu");</span>
+    }
+    else {
+        //Gets all the dishes from the database
+<span class="cstat-no" title="statement not covered" >        schemaDish.modelDish.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultDish) {</span>
+            //Checks if there is an error, if so, informs the user
+<span class="cstat-no" title="statement not covered" >            if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(400).send("Error: " + err);</span>
+            }
+            else {
+                //Gets all the menus from the database
+<span class="cstat-no" title="statement not covered" >                schemaMenu.modelMenu.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultMenu) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                        res.status(400).send("Error: " + err);</span>
+                    }
+                    else {
+&nbsp;
+                        //Fills the arrayDishesObject with the dishes objects related to the dishes' id's in the arrayDishesId
+<span class="cstat-no" title="statement not covered" >                        for (let i = 0; i &lt; resultDish.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                            for (let j = 0; j &lt; arrayDishesId.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (arrayDishesId[j] == resultDish[i]._id) {</span>
+<span class="cstat-no" title="statement not covered" >                                    arrayDishesObj.push(resultDish[i]);</span>
+                                }
+                            }
+                        }
+&nbsp;
+                        //Creates a new menu model
+                        const newMenu = <span class="cstat-no" title="statement not covered" >schemaMenu.modelMenu({</span>
+                            date: menuDate,
+                            dishes: arrayDishesObj
+                        });
+&nbsp;
+                        //Checks if there is a menu with the same dishes as given, if there is one, returns its index, if not, returns undefined
+                        let repeatedMenuIndex = <span class="cstat-no" title="statement not covered" >checkRepeatedDishes(arrayDishesId, resultMenu);</span>
+&nbsp;
+                        //If there is a menu with the same dishes
+<span class="cstat-no" title="statement not covered" >                        if (repeatedMenuIndex != undefined) {</span>
+&nbsp;
+                            //Formats the menu date and new date for comparison
+                            let resultMenuDate = <span class="cstat-no" title="statement not covered" >resultMenu[repeatedMenuIndex].date.toString().split("00")[0];</span>
+                            let newMenuDate = <span class="cstat-no" title="statement not covered" >menuDate.split("00")[0];</span>
+&nbsp;
+                            //If the dates are the same, informs the user
+<span class="cstat-no" title="statement not covered" >                            if (resultMenuDate == newMenuDate) {</span>
+<span class="cstat-no" title="statement not covered" >                                res.status(400).send("There is alredy a menu with the given dishes and date");</span>
+                            }
+                            else {
+                                //Saves the new menu 
+<span class="cstat-no" title="statement not covered" >                                newMenu.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+<span class="cstat-no" title="statement not covered" >                                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                        res.status(400).send("Error: " + err);</span>
+                                    }
+                                    else {
+<span class="cstat-no" title="statement not covered" >                                        res.status(200).send("Menu added");</span>
+                                    }
+                                });
+                            }
+                        }
+                        else {
+                            //Saves the new menu 
+<span class="cstat-no" title="statement not covered" >                            newMenu.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                    res.status(400).send("Error: " + err);</span>
+                                }
+                                else {
+<span class="cstat-no" title="statement not covered" >                                    res.status(200).send("Menu added");</span>
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        });
+    }
+}
+&nbsp;
+// Update
+function <span class="fstat-no" title="function not covered" >updateMenu(</span>req, res) {
+&nbsp;
+    //Variables from request body
+    const menuId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+    let newDate = <span class="cstat-no" title="statement not covered" >req.body.date;</span>
+    const arrayDishesId = <span class="cstat-no" title="statement not covered" >req.body.dishes;</span>
+&nbsp;
+    //Finds all the menus in the database
+<span class="cstat-no" title="statement not covered" >    schemaMenu.modelMenu.findById(menuId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultMenuId) {</span>
+        //If there is an error informs the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(400).send("Error: " + err);</span>
+        }
+        else {
+            //If there are no menus in the database to show, informs the user
+<span class="cstat-no" title="statement not covered" >            if (resultMenuId == null || resultMenuId == undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(400).send("The menu you are trying to update cannot be found in the database");</span>
+            }
+            //Checks if a new date or new dishes were added in the request, if not, informs the user
+            else {
+<span class="cstat-no" title="statement not covered" >                if ((newDate == null || newDate == undefined) &amp;&amp; (arrayDishesId == undefined || arrayDishesId.length == 0)) {</span>
+<span class="cstat-no" title="statement not covered" >                    res.status(400).send("A new date or new dishes are needed to update the menu");</span>
+                }
+                else {
+                    //Finds all the dishes in the database
+<span class="cstat-no" title="statement not covered" >                    schemaDish.modelDish.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultDishes) {</span>
+                        //If there is an error, informs the user 
+<span class="cstat-no" title="statement not covered" >                        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                            res.status(400).send("Error: " + err);</span>
+                        }
+                        else {
+                            //Variable that holds the dishes' objects
+                            let arrayDishesObj = <span class="cstat-no" title="statement not covered" >[];</span>
+                            //Variable that keeps information about the updates
+                            let change = <span class="cstat-no" title="statement not covered" >"";</span>
+&nbsp;
+                            //Checks if there is a new date to update, if so, updates it
+<span class="cstat-no" title="statement not covered" >                            if (newDate != null &amp;&amp; newDate != undefined) {</span>
+&nbsp;
+                                let resultDate = <span class="cstat-no" title="statement not covered" >resultMenuId.date.toString().split("00")[0];</span>
+<span class="cstat-no" title="statement not covered" >                                newDate = newDate.toString().split("00")[0];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (resultDate === newDate) {</span>
+<span class="cstat-no" title="statement not covered" >                                    change = "date";</span>
+                                }
+                                else {
+<span class="cstat-no" title="statement not covered" >                                    resultMenuId.set({ date: newDate });</span>
+<span class="cstat-no" title="statement not covered" >                                    console.log("Date updated");</span>
+                                }
+                            }
+&nbsp;
+                            //Checks if there are new dishes to update, if so, updates them
+<span class="cstat-no" title="statement not covered" >                            if (arrayDishesId != undefined) {</span>
+&nbsp;
+                                //Populates the arrayDishesObj with the dishes' objects related to the dishes' id's given in the request body
+<span class="cstat-no" title="statement not covered" >                                for (let i = 0; i &lt; resultDishes.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                    for (let j = 0; j &lt; arrayDishesId.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                                        if (arrayDishesId[j] == resultDishes[i]._id) {</span>
+<span class="cstat-no" title="statement not covered" >                                            arrayDishesObj.push(resultDishes[i]);</span>
+                                        }
+                                    }
+                                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (arrayDishesObj.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                    change = "dishes";</span>
+                                }
+                                else {
+&nbsp;
+                                    let repeatedMenuIndex = <span class="cstat-no" title="statement not covered" >checkRepeatedDishes(arrayDishesId, resultMenuId);</span>
+&nbsp;
+                                    // console.log("ResultMenuId: " + typeof(resultMenuId));
+                                    // console.log("ArrayDishesId: " + arrayDishesId);
+                                    // console.log("Repeated menu index: " + repeatedMenuIndex);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    if (repeatedMenuIndex != undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                                        change = "sameDishes";</span>
+                                    }
+                                    else {
+<span class="cstat-no" title="statement not covered" >                                        resultMenuId.set({ dishes: arrayDishesObj });</span>
+                                    }
+&nbsp;
+                                    //Checks if there are any repeated changes, if so, informs the user
+<span class="cstat-no" title="statement not covered" >                                    if (change != "") {</span>
+<span class="cstat-no" title="statement not covered" >                                        switch (change) {</span>
+                                            case "date":
+<span class="cstat-no" title="statement not covered" >                                                res.status(400).send("The current and the new dates are the same");</span>
+<span class="cstat-no" title="statement not covered" >                                                break;</span>
+                                            case "dishes":
+<span class="cstat-no" title="statement not covered" >                                                res.status(400).send("The dishes you are trying to update cannot be found in the database");</span>
+<span class="cstat-no" title="statement not covered" >                                                break;</span>
+                                            case "sameDishes":
+<span class="cstat-no" title="statement not covered" >                                                res.status(400).send("The new dishes are the same as the old ones");</span>
+                                        }
+                                    }
+                                    //Saves the updated menu
+                                    else {
+<span class="cstat-no" title="statement not covered" >                                        resultMenuId.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+<span class="cstat-no" title="statement not covered" >                                            if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                                res.status(400).send("Error: " + err);</span>
+                                            }
+                                            else {
+<span class="cstat-no" title="statement not covered" >                                                resultMenuId.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+<span class="cstat-no" title="statement not covered" >                                                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                                        res.status(400).send("Error: " + err);</span>
+                                                    }
+                                                    else {
+<span class="cstat-no" title="statement not covered" >                                                        res.status(200).send("Menu updated");</span>
+                                                    }
+                                                });
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    });
+}
+&nbsp;
+// Delete
+function <span class="fstat-no" title="function not covered" >deleteMenu(</span>req, res) {
+&nbsp;
+    //Holds the menu id given in the request
+    const menuId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+&nbsp;
+    //Finds the menu with the given ID
+<span class="cstat-no" title="statement not covered" >    schemaMenu.modelMenu.findById(menuId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultMenu) {</span>
+        //If there is an error, infroms the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(404).send("The menu you are trying to delete does not exist in the database");</span>
+        }
+        //Deletes the menu
+        else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (resultMenu == undefined || resultMenu == null) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404).send("The menu you are trying to delete does not exist in the database");</span>
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                resultMenu.delete();</span>
+<span class="cstat-no" title="statement not covered" >                res.status(200).send("Menu deleted");</span>
+            }
+        }
+    })
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >checkRepeatedDishes(</span>arrayId, menu) {
+    //Holds the repeated dishes count
+    let repeatedDishes = <span class="cstat-no" title="statement not covered" >0;</span>
+    //Holds the menu index
+    let menuIndex;
+&nbsp;
+    // console.log("Repeated Dishes: " + repeatedDishes);
+    // console.log("ArrayId Length: " + arrayId.length);
+    // console.log("ArrayMenu Length: " + arrayMenu.length);
+    
+    //Checks if menu is an array of objects or a single object
+<span class="cstat-no" title="statement not covered" >    if (menu.length == undefined) {</span>
+        //Checks if the ids' in the arrayId are the same as the dishes ids' in the menu
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; menu.dishes.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            for (let j = 0; j &lt; arrayId.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                if (arrayId[j] == menu.dishes[i]._id) {</span>
+<span class="cstat-no" title="statement not covered" >                    repeatedDishes++;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (repeatedDishes == arrayId.length &amp;&amp; arrayId.length == menu.dishes.length) {</span>
+<span class="cstat-no" title="statement not covered" >                    menuIndex = 0;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                }
+            }
+        }
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; menu.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            repeatedDishes = 0;</span>
+<span class="cstat-no" title="statement not covered" >            for (let j = 0; j &lt; menu[i].dishes.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                for (let k = 0; k &lt; arrayId.length; k++) {</span>
+                    
+                    //Checks if the dishes id's are the same as in a given menu
+<span class="cstat-no" title="statement not covered" >                    if (arrayId[k] == menu[i].dishes[j]._id) {</span>
+<span class="cstat-no" title="statement not covered" >                        repeatedDishes++;</span>
+                    }
+&nbsp;
+                    //If the repeated dishes count is the same as the arrayId length and the menu dishes array length, returns the menu's index
+<span class="cstat-no" title="statement not covered" >                    if (repeatedDishes == arrayId.length &amp;&amp; arrayId.length == menu[i].dishes.length) {</span>
+<span class="cstat-no" title="statement not covered" >                        menuIndex = i;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    }
+                }
+            }
+        }
+    }
+<span class="cstat-no" title="statement not covered" >    return menuIndex;</span>
+}
+&nbsp;
+// Exports
+module.exports = {
+    getMenu: getMenu,
+    getMenuById, getMenuById,
+    postMenu: postMenu,
+    updateMenu: updateMenu,
+    deleteMenu: deleteMenu
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 10 2019 11:54:15 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

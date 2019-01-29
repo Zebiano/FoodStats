@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1547548296527" clover="3.2.0">
+  <project timestamp="1547548296527" name="All files">
+    <metrics statements="46" coveredstatements="46" conditionals="0" coveredconditionals="0" methods="44" coveredmethods="44" elements="90" coveredelements="90" complexity="0" loc="46" ncloc="46" packages="1" files="1" classes="1">
+      <file name="requests.js" path="/home/ubuntu/workspace/tests/requests.js">
+        <metrics statements="46" coveredstatements="46" conditionals="0" coveredconditionals="0" methods="44" coveredmethods="44"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="97" count="2" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
+        <line num="130" count="1" type="stmt"/>
+        <line num="135" count="1" type="stmt"/>
+        <line num="142" count="2" type="stmt"/>
+        <line num="147" count="2" type="stmt"/>
+        <line num="153" count="1" type="stmt"/>
+        <line num="158" count="1" type="stmt"/>
+        <line num="164" count="1" type="stmt"/>
+        <line num="169" count="1" type="stmt"/>
+        <line num="175" count="1" type="stmt"/>
+        <line num="180" count="1" type="stmt"/>
+        <line num="187" count="2" type="stmt"/>
+        <line num="192" count="2" type="stmt"/>
+        <line num="198" count="1" type="stmt"/>
+        <line num="203" count="1" type="stmt"/>
+        <line num="209" count="1" type="stmt"/>
+        <line num="214" count="1" type="stmt"/>
+        <line num="220" count="1" type="stmt"/>
+        <line num="225" count="1" type="stmt"/>
+        <line num="232" count="1" type="stmt"/>
+        <line num="237" count="1" type="stmt"/>
+        <line num="243" count="1" type="stmt"/>
+        <line num="248" count="1" type="stmt"/>
+        <line num="253" count="2" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

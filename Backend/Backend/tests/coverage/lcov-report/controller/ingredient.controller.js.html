@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controller/ingredient.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">controller</a> ingredient.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.17% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Requires
+const schemaIngredient = require('/home/ubuntu/workspace/backend/model/schemas/ingredient.schema.js');
+const verifications = require('/home/ubuntu/workspace/backend/controller/verifications.controller.js');
+&nbsp;
+// Get
+function <span class="fstat-no" title="function not covered" >getIngredient(</span>req, res) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.find().sort({ name: "asc" }).exec(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredients) {</span>
+        //If there is an error, informs the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(500).send("An unexpected error occured server-side. We're sorry for the unconvenience.");</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            if (verifications.verifyLength(resultIngredients.length, 0)) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404).send("There are no ingredients in the database.");</span>
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                res.set('Access-Control-Allow-Origin', '*');</span>
+<span class="cstat-no" title="statement not covered" >                res.status(200).json({ ingredients: resultIngredients });</span>
+            }
+        }
+    })
+};
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getIngredientById(</span>req, res) {
+    //Holds the ingredient id 
+    const ingredientId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+&nbsp;
+    //Finds the ingredient
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.findById(ingredientId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredient) {</span>
+        //If there is an error, infroms the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(404).send("The ingredient you are trying to find, does not exist in the database");</span>
+        }
+        //Sends the ingredient to the user
+        else {
+<span class="cstat-no" title="statement not covered" >            if (resultIngredient == undefined || resultIngredient == null) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404).send("The ingredient you are trying to find, does not exist in the database");</span>
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                res.status(200).json({ ingredient: resultIngredient });</span>
+            }
+        }
+    })
+};
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getIngredientByName(</span>req, res) {
+    //Holds the ingredient name 
+    const ingredientName = <span class="cstat-no" title="statement not covered" >verifications.formatString(req.params.name);</span>
+&nbsp;
+    //Finds all ingredients
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, ingredients) {</span>
+        //If there is an error, informs the user 
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(500).send("Error: " + err);</span>
+        }
+        else {
+            //Holds all the ingredients that will be sent
+            let resultIngredients = <span class="cstat-no" title="statement not covered" >[];</span>
+&nbsp;
+            //Populates the result ingredients array
+<span class="cstat-no" title="statement not covered" >            for (let i = 0; i &lt; ingredients.length; i++) {</span>
+                let substring = <span class="cstat-no" title="statement not covered" >ingredients[i].name.substring(0, ingredientName.length);</span>
+<span class="cstat-no" title="statement not covered" >                if (ingredientName == substring) {</span>
+<span class="cstat-no" title="statement not covered" >                    resultIngredients.push(ingredients[i]);</span>
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            res.status(200).json({ ingredients: resultIngredients });</span>
+        }
+    })
+};
+&nbsp;
+// Post
+function <span class="fstat-no" title="function not covered" >postIngredient(</span>req, res) {
+    let nameIngredient = <span class="cstat-no" title="statement not covered" >req.body.name;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredients) {</span>
+        // If there is an error, informs the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(400).send("Error: " + err);</span>
+        }
+        else {
+&nbsp;
+            //Checks if there is a name for the new ingredient, if not, warns the user
+<span class="cstat-no" title="statement not covered" >            if (nameIngredient == undefined || nameIngredient == "") {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(400).send("A name is needed to add a new ingredient");</span>
+            }
+            else {
+&nbsp;
+                //Formats the ingredient name
+<span class="cstat-no" title="statement not covered" >                nameIngredient = verifications.formatString(nameIngredient);</span>
+&nbsp;
+                const exists = <span class="cstat-no" title="statement not covered" >verifications.verifyIfExists(nameIngredient, resultIngredients);</span>
+&nbsp;
+                //Checks if the new ingredient exists in the database
+<span class="cstat-no" title="statement not covered" >                if (exists) {</span>
+<span class="cstat-no" title="statement not covered" >                    res.json({error: "The ingredient you added already exists!"});</span>
+<span class="cstat-no" title="statement not covered" >                    console.log("json");</span>
+                }
+                else {
+                    // Create new model to add
+                    const newIngredient = <span class="cstat-no" title="statement not covered" >schemaIngredient.modelIngredient({</span>
+                        name: nameIngredient
+                    });
+&nbsp;
+                    // Saves the new ingredient
+<span class="cstat-no" title="statement not covered" >                    newIngredient.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+                        // If there is an error, informs the user
+<span class="cstat-no" title="statement not covered" >                        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                            res.status(400).send("Error saving the ingredient: " + err);</span>
+                        }
+                        // Informs the user that the new ingredient was saved to the database
+                        else {
+<span class="cstat-no" title="statement not covered" >                            res.status(200).send("Ingredient added!");</span>
+                        }
+                    })
+                }
+            }
+        }
+    })
+};
+&nbsp;
+// Update
+function <span class="fstat-no" title="function not covered" >updateIngredient(</span>req, res) {
+    // ID of the ingredient
+    const ingredientId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+&nbsp;
+    // New name to update
+    let newNameIngredient = <span class="cstat-no" title="statement not covered" >req.body.name;</span>
+&nbsp;
+    // Finds the ingredient with the given id
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.findById(ingredientId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredient) {</span>
+        //If there is an error, informs the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(404).send("The ingredient you are trying to update cannot be found in the database");</span>
+        }
+        else {
+            // Checks if a new name to update exists, if not, informs the user
+<span class="cstat-no" title="statement not covered" >            if (newNameIngredient == "" || newNameIngredient == undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(400).send("A new name is required to update the ingredient");</span>
+            }
+            else {
+                //Finds all the ingredients
+<span class="cstat-no" title="statement not covered" >                schemaIngredient.modelIngredient.find(<span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredients) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                        res.status(400).send("Error: " + err);</span>
+                    }
+                    else {
+                        // Formats the new ingredient name
+<span class="cstat-no" title="statement not covered" >                        newNameIngredient = verifications.formatString(newNameIngredient);</span>
+&nbsp;
+                        const exists = <span class="cstat-no" title="statement not covered" >verifications.verifyIfExists(newNameIngredient, resultIngredients);</span>
+&nbsp;
+                        // Checks if the new ingredient name is the same as the old one
+<span class="cstat-no" title="statement not covered" >                        if (resultIngredient.name == newNameIngredient) {</span>
+<span class="cstat-no" title="statement not covered" >                            res.status(400).send("The new ingredient name is the same as the old one");</span>
+                        }
+                        //Checks if the new ingredient name already exists in the database, if so, informs the user
+                        else <span class="cstat-no" title="statement not covered" >if (exists) {</span>
+<span class="cstat-no" title="statement not covered" >                            res.status(400).send("There is already a ingredient with the given name in the database");</span>
+                        }
+                        else {
+                            //Updates the ingredient name
+<span class="cstat-no" title="statement not covered" >                            resultIngredient.set({ name: newNameIngredient });</span>
+&nbsp;
+                            //Saves the updated ingredient
+<span class="cstat-no" title="statement not covered" >                            resultIngredient.save(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                    res.status(400).send("Error: " + err);</span>
+                                }
+                                else {
+<span class="cstat-no" title="statement not covered" >                                    res.status(200).send("Ingredient updated!");</span>
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        }
+    });
+}
+&nbsp;
+// Delete
+function <span class="fstat-no" title="function not covered" >deleteIngredient(</span>req, res) {
+    //Id of the ingredient
+    const ingredientId = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
+&nbsp;
+    //Finds the ingredient with the given ID
+<span class="cstat-no" title="statement not covered" >    schemaIngredient.modelIngredient.findById(ingredientId, <span class="fstat-no" title="function not covered" >fu</span>nction(err, resultIngredient) {</span>
+        //If there is an error, infroms the user
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >            res.status(404).send("The ingredient you are trying to delete does not exist in the database");</span>
+        }
+        else {
+            //Checks if the ingredient was found
+<span class="cstat-no" title="statement not covered" >            if (resultIngredient == null || resultIngredient.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404).send("The ingredient you are trying to delete does not exist in the database");</span>
+            }
+            //Deletes the ingredient
+            else {
+<span class="cstat-no" title="statement not covered" >                resultIngredient.delete();</span>
+<span class="cstat-no" title="statement not covered" >                res.status(200).send("Ingredient deleted!");</span>
+            }
+        }
+    })
+};
+&nbsp;
+// Exports
+module.exports = {
+    getIngredient: getIngredient,
+    getIngredientById: getIngredientById,
+    getIngredientByName: getIngredientByName,
+    postIngredient: postIngredient,
+    updateIngredient: updateIngredient,
+    deleteIngredient: deleteIngredient
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 10 2019 11:54:15 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

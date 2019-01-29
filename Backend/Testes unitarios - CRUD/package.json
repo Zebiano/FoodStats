@@ -1,0 +1,23 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "unityTests": "jest || true",
+    "unityTestsCoverage": "jest --coverage || true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "tests/coverage",
+    "roots": ["<rootDir>/tests/"],
+    "verbose": true
+  }
+}

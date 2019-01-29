@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Api do projeto SD",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "colors": "^1.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.13",
+    "nodemon": "^1.18.6"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "nodemon": "nodemon server.js",
+    "unityTests": "jest || true",
+    "unityTestsCoverage": "jest --coverage || true",
+    "generateDocs": "apidoc -i routes -o public/apidoc"
+  },
+  "jest": {
+    "coverageDirectory": "tests/coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}

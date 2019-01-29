@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for verifications.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> verifications.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.54% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>32/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.86% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.54% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// --- Verifications --- \\
+&nbsp;
+//Requires
+const bcrypt = require("bcrypt");
+&nbsp;
+// Formats the ingredient name, capitalizing the first letter and lower casing the remaining letters
+function formatString(nameIngredient) {
+    let formatedName = "";
+    let splitString = nameIngredient.split(" ");
+&nbsp;
+    for (let i = 0; i &lt; splitString.length; i++) {
+        for (let j = 0; j &lt; splitString[i].length; j++) {
+            {
+                if (j == 0) {
+                    formatedName += splitString[i][j].toUpperCase();
+                }
+                else {
+                    formatedName += splitString[i][j].toLowerCase();
+                }
+            }
+        }
+        if (i != splitString.length - 1) {
+            {
+                formatedName += " ";
+            }
+        }
+    }
+    //console.log(formatedName);
+&nbsp;
+    return formatedName;
+}
+&nbsp;
+// Verifies if a given data exists in a given array
+function verifyIfExists(data, array) {
+    //If the given data is an array
+    if (data.constructor === Array) {
+        // console.log(data);
+        // console.log(array);
+&nbsp;
+        let count = 0;
+&nbsp;
+        //Verifies if any of the data content is equal to the data in the given array
+        for (let i = 0; i &lt; data.length; i++) {
+            for (let j = 0; j &lt; array.length; j++) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof(data[i]) == "object" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >typeof(array[j]) == "object")</span> {
+<span class="cstat-no" title="statement not covered" >                    if (data[i].name == array[j].name) {</span>
+<span class="cstat-no" title="statement not covered" >                        count++;</span>
+                    }
+                }
+                else <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof(data[i]) == "string" &amp;&amp; typeof(array[j]) == "object") {
+<span class="cstat-no" title="statement not covered" >                    if (data[i] == array[j].name) {</span>
+<span class="cstat-no" title="statement not covered" >                        count++;</span>
+                    }
+                }
+                else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof(data[i]) == "string" &amp;&amp; typeof(array[j]) == "string") {
+                    if (data[i] == array[j]) {
+                        count++;
+                    }
+                }
+                else <span class="cstat-no" title="statement not covered" >if (data[i].name == array[j]) {</span>
+<span class="cstat-no" title="statement not covered" >                    count++;</span>
+                }
+            }
+        }
+        if (count == data.length) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    //If the given data is not an array
+    else {
+        
+        for (let i = 0; i &lt; array.length; i++) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof(array[i]) == "object" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >array[i].name == data)</span> {
+<span class="cstat-no" title="statement not covered" >                return true;</span>
+            }
+            else if (array[i] == data) {
+                return true;
+            }
+            
+        }
+        return false;
+    }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >verifyIfUserExists(</span>username, users) {
+    
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; users.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        if (username == users[i].username) {</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }
+    }
+    
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+}
+&nbsp;
+// Verifies if the first parameter.length has the length of the second parameter
+function verifyLength(length, data) {
+    if (length == data) {
+        //console.log("Length is the same as data");
+        return true;
+    }
+    else {
+        //console.log("Length is NOT the same as data");
+        return false;
+    }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >verifyToken(</span>req, res, next) {
+    const bearerHeader = <span class="cstat-no" title="statement not covered" >req.headers["authorization"];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (bearerHeader != undefined) {</span>
+        const bearer = <span class="cstat-no" title="statement not covered" >bearerHeader.split(" ");</span>
+        const bearerToken = <span class="cstat-no" title="statement not covered" >bearer[1];</span>
+<span class="cstat-no" title="statement not covered" >        req.token = bearerToken;</span>
+<span class="cstat-no" title="statement not covered" >        next();</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >        res.sendStatus(403);</span>
+    }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >encryptPassword(</span>password) {
+<span class="cstat-no" title="statement not covered" >    return bcrypt.hashSync(password, bcrypt.genSaltSync(9));</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >comparePasswords(</span>password, encryptedPassword){
+<span class="cstat-no" title="statement not covered" >    return bcrypt.compareSync(password, encryptedPassword);</span>
+}
+&nbsp;
+module.exports = {
+    formatString: formatString,
+    verifyIfExists: verifyIfExists,
+    verifyIfUserExists: verifyIfUserExists,
+    verifyLength: verifyLength,
+    verifyToken: verifyToken,
+    encryptPassword: encryptPassword,
+    comparePasswords: comparePasswords
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 10 2019 10:04:42 GMT+0000 (UTC)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
