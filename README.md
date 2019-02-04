@@ -6,26 +6,26 @@ Keep in mind this project was developed in cloud9, which basically means all the
 ## Authors
 FoodStats was created by a group of 4 people, each one of them being responsible for different sections.
 
-1. Back-end: [Artem Polushin](link)
-2. PWA and service workers: [Francisco Matos](https://github.com/fiuzwagger)
-3. Front-end: [Hugo Barreiro](https://github.com/HugoBar)
-4. Arduino: [Sebastião Barros](https://github.com/Zebiano) (me)
-5. Unity Tests: [Sebastião Barros](https://github.com/Zebiano) (me)
+* Back-end: [Artem Polushin](https://lab.hakim.se/404/)
+* PWA and service workers: [Francisco Matos](https://github.com/fiuzwagger)
+* Front-end: [Hugo Barreiro](https://github.com/HugoBar)
+* Arduino: [Sebastião Barros](https://github.com/Zebiano) (me)
+* Unity Tests: [Sebastião Barros](https://github.com/Zebiano) (me)
 
 Even though we were assigned reponsibilities, everyone still worked on every section to help out! 
 
 ## Installation
 Right now, it's hard to get the Back- and Front-end to work outside of cloud9. Though it's already possible to run the arduino server! (It's something ok?)
 
-Please consider using the latest [LTS version of NodeJs](https://nodejs.org/en/download/)!
+* Please consider using the latest [LTS version of NodeJs](https://nodejs.org/en/download/)!
+* Keep in mind we used mLab to host our database. If you want to test out everything, you'll have to create one yourself!
 
-Usually, a simple `npm install` works out of the box. Then `cd` into the directory and run `npm run nodemon`. I'll get into smaller details later on.
+Usually, a simple `npm install` works out of the box. Then `cd` into the directory and run `npm run nodemon`. I'll get into smaller details later on. 
 
 ## In-depth explanation
 Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
 
-So, we had the 
-The following topics had to be covered:
+So, our platform can be split into 5 big sections, as mentioned above. These, go as following:
 
 1. Create an API with NodeJs and express in the Back-end
 2. Use Vue in the Front-end
@@ -33,4 +33,22 @@ The following topics had to be covered:
 4. Run unity tests
 5. Implement PWA and service workers
 
+We ended up having 5 different servers that work independently, but at the same time contemplate each other. 
+
+### Back-end
+For the backend, we used a NodeJS, Express server that works as an API. There's a dedicated documentation created with [apidocjs](https://www.npmjs.com/package/apidoc) on the root route of the API. You can also access its `index.html` at `Backend/public/apidoc/index.html`.
+
+At its core, we used REST to handle the follwing routes:
+
+* `/Ingredients`
+* `/Dishes`
+* `/Menus`
+* `/Users`
+* `/Arduino`
+
+To keep our project organised, we decided to use MVC as our file structuring system. Every controller file connects to our databse of choice, in this case [MongoDB](https://www.mongodb.com/), where we also store some sensitive data like usernames and passwords. Obviously, we implemented middleware that checks for user authentication ([JSON WebTokens](https://www.npmjs.com/package/jsonwebtoken)) and encrypted passwords ([BCrypt](https://www.npmjs.com/package/bcrypt)).
+
+### Front-end
+
+### Arduino
 We ended up using an arduino connected to 4 physical buttons as well as a capacitivce touch sensor. Each button represents one of the 4 dishes our canteen has: Meat, Fish, Vegetarian and Diet. Whenever a student buys a meal,
