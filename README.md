@@ -6,7 +6,7 @@ Keep in mind this project was developed in cloud9, which basically means all the
 ## Authors
 FoodStats was created by a group of 4 people, each one of them being responsible for different sections.
 
-* Back-end: [Artem Polushin](Github/artwewe)
+* Back-end: [Artem Polushin](https://github.com/artwewe)
 * PWA and service workers: [Francisco Matos](https://github.com/fiuzwagger)
 * Front-end: [Hugo Barreiro](https://github.com/HugoBar)
 * Arduino: [Sebastião Barros](https://github.com/Zebiano) (me)
