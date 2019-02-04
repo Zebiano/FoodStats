@@ -56,8 +56,9 @@ At first, we thought about using a sidebar throughout the whole project, but qui
 ### Arduino
 We ended up using an arduino connected to 4 physical buttons as well as a [capacitivce touch sensor](https://wiki.keyestudio.com/index.php/Ks0031_keyestudio_Capacitive_Touch_Sensor). Each button represents one of the 4 dishes our canteen has: Meat, Fish, Vegetarian and Diet. Whenever a student buys a meal, its respective button should be pressed. That then sends info to our API to save the data onto our database.
 
-As for the sensor, there weren't any that could really help us out for our project. But since we had to at least use one, we decided to give the touch sensor a try. It's sort of a little extra, regarding safety. The arduino has two states: awake and asleep. Whenever the sensor detects a touch input, the arduino either goes into sleep or awake mode. While asleep, none of the 4 buttons send a request to the API, and instead send a message asking to "Wake up the arduino!".
+As for the sensor, there weren't any that could really help us out for our project. But since we had to at least use one, we decided to give the touch sensor a try. It's sort of a little extra, regarding safety. The arduino has two states: awake and asleep. Whenever the sensor detects a touch input, the arduino either goes into sleep or awake. While asleep, none of the 4 buttons send a request to the API, and instead send a message asking to "Wake up the arduino!".
 
 ### PWA and service workers
+
 
 ### Unity Testing
