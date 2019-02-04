@@ -6,7 +6,7 @@ Keep in mind this project was developed in cloud9, which basically means all the
 ## Authors
 FoodStats was created by a group of 4 people, each one of them being responsible for different sections.
 
-* Back-end: [Artem Polushin](https://lab.hakim.se/404/)
+* Back-end: [Artem Polushin](Github/artwewe)
 * PWA and service workers: [Francisco Matos](https://github.com/fiuzwagger)
 * Front-end: [Hugo Barreiro](https://github.com/HugoBar)
 * Arduino: [Sebastião Barros](https://github.com/Zebiano) (me)
@@ -25,7 +25,7 @@ Usually, a simple `npm install` works out of the box. Then `cd` into the directo
 ## In-depth explanation
 Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
 
-So, our platform can be split into 5 big sections, as mentioned above. These, go as following:
+So, our platform can be split into 5 big sections, as mentioned above. The project **had** to incldue the following:
 
 1. Create an API with NodeJs and express in the Back-end
 2. Use Vue in the Front-end
@@ -46,9 +46,14 @@ At its core, we used REST to handle the follwing routes:
 * `/Users`
 * `/Arduino`
 
-To keep our project organised, we decided to use MVC as our file structuring system. Every controller file connects to our databse of choice, in this case [MongoDB](https://www.mongodb.com/), where we also store some sensitive data like usernames and passwords. Obviously, we implemented middleware that checks for user authentication ([JSON WebTokens](https://www.npmjs.com/package/jsonwebtoken)) and encrypted passwords ([BCrypt](https://www.npmjs.com/package/bcrypt)).
+To keep our project organised, we decided to use MVC as our file structuring system. Every controller file connects to our databse of choice, in this case [MongoDB](https://www.mongodb.com/), where we also store some sensitive data like usernames and passwords. Obviously, we implemented middleware that checks for user authentication ([JSON WebTokens](https://www.npmjs.com/package/jsonwebtoken)) and encrypted passwords with [BCrypt](https://www.npmjs.com/package/bcrypt).
 
 ### Front-end
+The framework we had to use was [Vue](https://www.npmjs.com/package/vue). For frameworks inside Vue, [Bulma](https://www.npmjs.com/package/bulma) and [Buefy](https://www.npmjs.com/package/buefy) were used.
+
+At first, we thought about using a sidebar throughout the whole project, but quickly realized it's not a good idea since we'll have to implement a PWA version of it. After thinking about it, a navbar got implemted instead and with it, you're able to navigate to the main pages of the platform:
+
+* 
 
 ### Arduino
 We ended up using an arduino connected to 4 physical buttons as well as a capacitivce touch sensor. Each button represents one of the 4 dishes our canteen has: Meat, Fish, Vegetarian and Diet. Whenever a student buys a meal,
