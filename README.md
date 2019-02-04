@@ -10,7 +10,7 @@ FoodStats was created by a group of 4 people, each one of them being responsible
 * PWA and service workers: [Francisco Matos](https://github.com/fiuzwagger)
 * Front-end: [Hugo Barreiro](https://github.com/HugoBar)
 * Arduino: [Sebastião Barros](https://github.com/Zebiano) (me)
-* Unity Tests: [Sebastião Barros](https://github.com/Zebiano) (me)
+* Unit Testing: [Sebastião Barros](https://github.com/Zebiano) (me)
 
 Even though we were assigned reponsibilities, everyone still worked on every section to help out! 
 
@@ -30,7 +30,7 @@ So, our platform can be split into 5 big sections, as mentioned above. The proje
 1. Create an API with NodeJs and express in the Back-end
 2. Use Vue in the Front-end
 3. Use an arduino and any type of sensor
-4. Run unity tests
+4. Run unit tests
 5. Implement PWA and service workers
 
 We ended up having 5 different servers that work independently, but at the same time contemplate each other. 
@@ -59,6 +59,12 @@ We ended up using an arduino connected to 4 physical buttons as well as a [capac
 As for the sensor, there weren't any that could really help us out for our project. But since we had to at least use one, we decided to give the touch sensor a try. It's sort of a little extra, regarding safety. The arduino has two states: awake and asleep. Whenever the sensor detects a touch input, the arduino either goes into sleep or awake. While asleep, none of the 4 buttons send a request to the API, and instead send a message asking to "Wake up the arduino!".
 
 ### PWA and service workers
+As usual, coding an app to be mobile friendly is a challenge if you don't start thinking about it from the beginning. Which kind of happened to us, since we focused on learning vue and getting used to it. It was something new to us, so we wanted to make sure everything goes smooth enough for us to be able to create a working app in the small amount of time we had. In the end, we had to tweak every page to be mobile-friendly, and to be honest, we're quite pleased with the end result.
 
+### Unit Testing
+As far as unit tests go, we had to split them onto two servers. Unfortunately, the `asyn/await` method doesn't work on the default version of node that cloud9 uses, which is needed for async testing (for example `http requests`).
 
-### Unity Testing
+With this in mind, we kept the unit tests for verification functions of the API inside the Back-end server, and created the rest of the tests in a new server.
+
+### Documentation
+This was more of a little extra, though incredibly important! It helped everyone to easily use the API without constantly having to ask each other. 
