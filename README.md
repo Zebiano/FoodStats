@@ -51,9 +51,13 @@ To keep our project organised, we decided to use MVC as our file structuring sys
 ### Front-end
 The framework we had to use was [Vue](https://www.npmjs.com/package/vue). For frameworks inside Vue, [Bulma](https://www.npmjs.com/package/bulma) and [Buefy](https://www.npmjs.com/package/buefy) were used.
 
-At first, we thought about using a sidebar throughout the whole project, but quickly realized it's not a good idea since we'll have to implement a PWA version of it. After thinking about it, a navbar got implemted instead and with it, you're able to navigate to the main pages of the platform:
-
-* 
+At first, we thought about using a sidebar throughout the whole project, but quickly realized it's not a good idea since we'll have to implement a PWA version of it. After thinking about it, a navbar got implemented instead and with it, you're able to navigate to the main pages of the platform.
 
 ### Arduino
-We ended up using an arduino connected to 4 physical buttons as well as a capacitivce touch sensor. Each button represents one of the 4 dishes our canteen has: Meat, Fish, Vegetarian and Diet. Whenever a student buys a meal,
+We ended up using an arduino connected to 4 physical buttons as well as a [capacitivce touch sensor](https://wiki.keyestudio.com/index.php/Ks0031_keyestudio_Capacitive_Touch_Sensor). Each button represents one of the 4 dishes our canteen has: Meat, Fish, Vegetarian and Diet. Whenever a student buys a meal, its respective button should be pressed. That then sends info to our API to save the data onto our database.
+
+As for the sensor, there weren't any that could really help us out for our project. But since we had to at least use one, we decided to give the touch sensor a try. It's sort of a little extra, regarding safety. The arduino has two states: awake and asleep. Whenever the sensor detects a touch input, the arduino either goes into sleep or awake mode. While asleep, none of the 4 buttons send a request to the API, and instead send a message asking to "Wake up the arduino!".
+
+### PWA and service workers
+
+### Unity Testing
