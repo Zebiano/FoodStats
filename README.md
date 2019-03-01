@@ -29,11 +29,11 @@ Usually, a simple `npm install` works out of the box. Then `cd` into the directo
 
 So, our platform can be split into 5 big sections, as mentioned above. The project **had** to incldue the following:
 
-1. Create an API with NodeJs and express in the Back-end
-2. Use Vue in the Front-end
-3. Use an arduino and any type of sensor
-4. Run unit tests
-5. Implement PWA and service workers
+1. [Create an API with NodeJs and express in the Back-end](#Back-end)
+2. [Use Vue in the Front-end](###Front-end)
+3. [Use an arduino and any type of sensor](### Arduino)
+4. [Implement PWA and service workers](###PWA-and-service-workers)
+5. [Run unit tests](###Unit-Testing)
 
 We ended up having 5 different servers that work independently, but at the same time contemplate each other. 
 
