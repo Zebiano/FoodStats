@@ -1,7 +1,9 @@
 # FoodStats
 The following project was designed to store and display data related to ingredients, recipes and dishes. Our platform is able to predict the amount of dishes that will be bought, and in doing so we hope to reduce the amount of waste created by preparing too many meals for a day. 
 
-Keep in mind this project was developed in cloud9, which basically means all the routes and such don't work, as of now. We'll try our best to fix this, but it's quite a long process. EDIT: I'm working on my own website where I might be able to host this project, with the database included... When (and if) it's up and running, I'll share a link!
+Keep in mind this project was developed in cloud9, which basically means all the routes and such don't work, as of now. We'll try our best to fix this, but it's quite a long process.
+
+EDIT: I'm working on my own website where I might be able to host this project, with the database included... When (and if) it's up and running, I'll share a link!
 
 ## Authors
 FoodStats was created by a group of 4 people, each one of them being responsible for different sections.
@@ -23,7 +25,7 @@ Right now, it's hard to get the Back- and Front-end to work outside of cloud9. T
 Usually, a simple `npm install` works out of the box. Then `cd` into the directory and run `npm run nodemon`. I'll get into smaller details later on. 
 
 ## In-depth explanation
-Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
+### Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
 
 So, our platform can be split into 5 big sections, as mentioned above. The project **had** to incldue the following:
 
