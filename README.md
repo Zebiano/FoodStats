@@ -25,7 +25,7 @@ Right now, it's hard to get the Back- and Front-end to work outside of cloud9. T
 Usually, a simple `npm install` works out of the box. Then `cd` into the directory and run `npm run nodemon`. I'll get into smaller details later on. 
 
 ## In-depth explanation
-### Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
+#### Here, I'll try to explain how this whole project works, so prepare to read a lot probably!
 
 So, our platform can be split into 5 big sections, as mentioned above. The project **had** to incldue the following:
 
